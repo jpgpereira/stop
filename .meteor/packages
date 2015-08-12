@@ -9,3 +9,5 @@ dburles:google-maps
 mdg:geolocation
 fourseven:scss
 poetic:materialize-scss
+iron:router
+jquery
