@@ -2,4 +2,25 @@
   <div class="map-container">
     {{> googleMap name="map" options=options}}
   </div>
+  <div id="markerModal" class="modal">
+    <div class="modal-content">
+      <form>
+        <p>
+          <input type="radio" id="stop" name="tipo" value="stop" checked/><label for="stop">Operação STOP</label>
+        </p>
+        <p>
+          <input type="radio" id="radar" name="tipo" value="radar"/><label for="radar">Radar</label>
+        </p>
+        <p>
+          <input type="radio" id="acidente" name="tipo" value="acidente"/><label for="acidente">Acidente</label>
+        </p>
+        <p>
+          <input type="radio" id="obras" name="tipo" value="obras"/><label for="obras">Obras</label>
+        </p>
+      </form>
+    </div>
+    <div class="modal-footer center-align">
+      <a id="addMarker" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Adicionar</a>
+    </div>
+  </div>
 </template>

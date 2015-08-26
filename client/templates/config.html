@@ -1,32 +1,26 @@
 <template name="config">
-  <a class="modal-trigger optionsWeb" href="#config"><i class="material-icons">settings</i></a>
-  <div id="config" class="modal">
+  <button data-target="config" class="hide-on-small-and-down btn btn-flat btn-large btn-floating modal-trigger blue-grey configMap"><i class="material-icons large">settings</i></button>
+  <button data-target="config" class="hide-on-med-and-up btn btn-flat btn-floating modal-trigger blue-grey configMap"><i class="material-icons large">settings</i></button>
+  <div id="config" class="modal bottom-sheet configModal ">
     <div class="modal-content">
-      <h4>Configurações</h4>
-      <p>A bunch of text</p>
-      <p>A bunch of text</p>
-      <p>A bunch of text</p>
-      <p>A bunch of text</p>
-      <p>A bunch of text</p>
-      <div class="container align-center">
-        <form>
+      <h5>Configurações</h5>
+      <form>
         <p>
-          <input type="checkbox" id="stop" />
-          <label for="stop">Operações STOP</label>
+          <input type="checkbox" id="stop" name="stop" /><label for="stop">Operações STOP</label>
         </p>
         <p>
-          <input type="checkbox" id="radares" />
-          <label for="radares">Radares</label>
+          <input type="checkbox" id="radares" name="radares" /><label for="radares">Radares</label>
         </p>
         <p>
-          <input type="checkbox" id="acidentes" />
-          <label for="acidentes">Acidentes</label>
+          <input type="checkbox" id="acidentes" name="acidentes" /><label for="acidentes">Acidentes</label>
+        </p>
+        <p>
+          <input type="checkbox" id="obras" name="obras" /><label for="obras">Obras</label>
         </p>
       </form>
-      </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Guardar</a>
+      <a href="" id="saveConfig" class="modal-action modal-close waves-effect waves-green btn-flat">Guardar</a>
     </div>
   </div>
 </template>

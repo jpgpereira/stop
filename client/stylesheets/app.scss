@@ -1,23 +1,7 @@
-// You can override colors BEFORE materialize.scss:
-// $primary-color: blue;
-
-// You can NOT use materialize color mixins since they are not imported yet.
-// WRONG! $primary-color: color("materialize-red", "lighten-2");
-
 @import 'sass/app-variables';
 @import "sass//poetic_materialize-scss/bower_components/materialize/sass/materialize";
 
-#sidenav-overlay {
-  top: 64px;
-}
-.side-nav {
-  top: 64px;
-}
-.side-nav a {
-  text-align: center;
-}
-
-.loadCenas {
+.progress {
   margin: 0;
 }
 
@@ -27,22 +11,58 @@
   position: fixed;
 }
 
-.optionsWeb {
+.configMap {
   color: #263238 !important;
   position: absolute;
-  bottom: 10%;
-  right: 2%;
+  bottom: 4%;
+  right: 4%;
   z-index: 1001;
 }
-.optionsWeb i {
-  font-size: 3.5em;
+.configMap i {
+  font-size: 3.25em;
 }
 
-footer {
-  bottom: 0;
-  position: absolute;
-  width: 100%;
+.modal.bottom-sheet.configModal {
+  width: 45%;
+  height: auto;
+  max-height: 100%;
+  right: 0 !important;
+  left: auto !important;
 }
-footer.page-footer {
-  padding: 0;
+#markerModal {
+  top: 30% !important;
+  max-width: 20%;
+}
+#addMarker {
+  float: none;
+}
+
+@media #{$medium-and-down} {  
+  .modal.bottom-sheet.configModal {
+    width: 60%;
+    height: auto;
+    max-height: 50%;
+  }
+  #markerModal {
+    max-width: 35%;
+  }
+}
+@media #{$small-and-down} {
+  .configMap {
+    bottom: 2%;
+    right: 2%;
+  }
+  .configMap i {
+    font-size: 2.25em;
+  }
+  
+  .modal.bottom-sheet.configModal  {
+    width: 100%;
+    height: auto;
+    max-height: 70%;
+  }
+
+  #markerModal {
+    max-width: 60%;
+  }
 }
